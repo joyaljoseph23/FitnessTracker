@@ -1,0 +1,21 @@
+﻿@model FitnessTracker.Models.Workout
+
+<h1>Add Workout</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Type">Type</label>
+        <input asp-for="Type" class="form-control"/>
+    </div>
+     <div>
+        <label asp-for="Duration">Duration</label>
+        <input asp-for="Duration" class="form-control"/>
+    </div>
+    <div>
+        <label asp-for="Date">Date</label>
+        <input asp-for="Date" class="form-control" type="date" />
+    </div>
+    <button type="submit" class="btn btn-secondary">Add</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary" >Back To Workout List</a>

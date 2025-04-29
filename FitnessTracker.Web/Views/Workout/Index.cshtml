@@ -1,0 +1,16 @@
+﻿@using FitnessTracker.Models
+@model List<Workout>
+
+<h1>Workout List</h1>
+
+<a asp-action="Add" class="btn btn-secondary">Add New Workout</a>
+
+<ul>
+    @foreach(var item in Model)
+    {
+        <li>
+            @item.Date.ToShortDateString() -@item.Type -@item.Duration minutes
+        </li>
+    }
+    
+</ul>
