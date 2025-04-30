@@ -12,5 +12,6 @@ namespace FitnessTracker.Models
         [Key]
         public Guid Id { get; set; }
         public string AimedBodyPart { get; set; }
+        public int DisplayOrder { get; set; }
     }
 }

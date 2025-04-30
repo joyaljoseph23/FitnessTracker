@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace FitnessTracker.DataAccess.Repository.IRepository
 {
-    interface IRepository<T>where T:class
+    public interface IRepository<T>where T:class
     {
         IEnumerable<T> GetAll();
         T GetFirstOrDefault(Expression<Func<T,bool>>filter);
         void Add(T entity);
-        void Update(T entity);
+       
         void Remove(T entity);
         void RemoveRange(IEnumerable<T>entity);
     }
